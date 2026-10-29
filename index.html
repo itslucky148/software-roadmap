@@ -31,7 +31,39 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 30px 15px 50px;
+      padding: 20px 15px 50px;
+    }
+
+    /* Switch Navbar */
+    .nav-switcher {
+      display: flex;
+      gap: 10px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 30px;
+      margin-bottom: 25px;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-btn {
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: all 0.2s ease;
+      color: var(--text-muted);
+    }
+
+    .nav-btn.active {
+      background: var(--accent);
+      color: #030712;
+      box-shadow: 0 0 12px var(--accent-glow);
+    }
+
+    .nav-btn:hover:not(.active) {
+      color: #fff;
     }
 
     .badge {
@@ -252,6 +284,12 @@
 </head>
 <body>
 
+  <!-- Switch Buttons -->
+  <nav class="nav-switcher">
+    <a href="https://itslucky148.github.io/network-roadmap/" class="nav-btn">🌐 Network Engineer</a>
+    <a href="#" class="nav-btn active">💻 Software Engineer</a>
+  </nav>
+
   <div class="badge">CAREER GUIDE 2026</div>
   <h1>SOFTWARE ENGINEER<br>ROADMAP</h1>
   <p class="subtitle">Step-by-step interactive visual path from fundamentals to enterprise architectures.</p>
@@ -456,4 +494,4 @@
     document.getElementById('showAllBtn').addEventListener('click', showAll);
   </script>
 </body>
-          </html>
+</html>
