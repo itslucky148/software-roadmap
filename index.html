@@ -541,6 +541,48 @@
       border-radius: 20px;
       display: inline-block;
     }
+
+    /* 3 Clean Pay Buttons */
+    .pay-apps-container {
+      margin-top: 12px;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+
+    .pay-apps-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .pay-apps-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .app-btn {
+      flex: 1;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 9px 6px;
+      border-radius: 8px;
+      background: #0f172a;
+      border: 1px solid var(--border);
+      color: #f1f5f9;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .app-btn:hover {
+      transform: translateY(-2px);
+      color: #fff;
+    }
+
+    .gpay-btn:hover { border-color: #4285f4; background: rgba(66, 133, 244, 0.15); }
+    .phonepe-btn:hover { border-color: #5f259f; background: rgba(95, 37, 159, 0.2); }
+    .paytm-btn:hover { border-color: #00b9f1; background: rgba(0, 185, 241, 0.15); }
   </style>
 </head>
 <body>
@@ -743,11 +785,29 @@
       <div class="modal-badge">OPEN SOURCE COMMUNITY</div>
       <h3>Support Tech Education 🚀</h3>
       <p>100% free and open-source. Direct peer-to-peer backing helps keep roadmaps updated.</p>
+      
+      <!-- Open QR Code -->
       <div class="qr-box">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=kartikeyk660@okaxis&pn=Lucky" alt="UPI QR" />
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=kartikeyk660@okaxis&pn=Lucky&cu=INR" alt="UPI QR" />
       </div>
       <div>
         <span class="upi-pill">UPI: <strong>kartikeyk660@okaxis</strong></span>
+      </div>
+
+      <!-- 3 Clean Direct Buttons -->
+      <div class="pay-apps-container">
+        <div class="pay-apps-label">Pay directly via your app:</div>
+        <div class="pay-apps-row">
+          <a href="gpay://upi/pay?pa=kartikeyk660@okaxis&pn=Lucky&cu=INR" class="app-btn gpay-btn">
+            Google Pay
+          </a>
+          <a href="phonepe://pay?pa=kartikeyk660@okaxis&pn=Lucky&cu=INR" class="app-btn phonepe-btn">
+            PhonePe
+          </a>
+          <a href="paytmmp://pay?pa=kartikeyk660@okaxis&pn=Lucky&cu=INR" class="app-btn paytm-btn">
+            Paytm
+          </a>
+        </div>
       </div>
     </div>
   </div>
