@@ -8,10 +8,10 @@
   <style>
     :root {
       --bg: #030712;
-      --card-bg: rgba(15, 23, 42, 0.85);
+      --card-bg: rgba(15, 23, 42, 0.9);
       --border: #1e293b;
       --accent: #38bdf8;
-      --accent-glow: rgba(56, 189, 248, 0.35);
+      --accent-glow: rgba(56, 189, 248, 0.45);
       --text: #f8fafc;
       --text-muted: #94a3b8;
     }
@@ -31,34 +31,35 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px 15px 50px;
+      padding: 24px 16px 60px;
     }
 
+    /* Switch Navbar */
     .nav-switcher {
       display: flex;
       gap: 10px;
-      background: rgba(15, 23, 42, 0.7);
+      background: rgba(15, 23, 42, 0.85);
       border: 1px solid var(--border);
       padding: 6px 12px;
       border-radius: 30px;
       margin-bottom: 25px;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
     }
 
     .nav-btn {
       text-decoration: none;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      padding: 6px 14px;
+      padding: 7px 16px;
       border-radius: 20px;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
       color: var(--text-muted);
     }
 
     .nav-btn.active {
       background: var(--accent);
       color: #030712;
-      box-shadow: 0 0 12px var(--accent-glow);
+      box-shadow: 0 0 16px var(--accent-glow);
     }
 
     .nav-btn:hover:not(.active) {
@@ -72,16 +73,16 @@
       font-size: 0.65rem;
       letter-spacing: 2px;
       font-weight: 700;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 20px;
       margin-bottom: 12px;
-      background: rgba(56, 189, 248, 0.05);
+      background: rgba(56, 189, 248, 0.08);
       text-transform: uppercase;
     }
 
     h1 {
       font-size: clamp(1.8rem, 5vw, 2.8rem);
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 1px;
       text-align: center;
       background: linear-gradient(135deg, #ffffff 40%, #38bdf8 100%);
@@ -92,23 +93,23 @@
 
     .subtitle {
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       text-align: center;
       margin-bottom: 25px;
-      max-width: 500px;
+      max-width: 520px;
     }
 
     .controls {
       display: flex;
       gap: 12px;
-      margin-bottom: 40px;
+      margin-bottom: 35px;
     }
 
     .btn {
       background: #0284c7;
       color: #fff;
       border: none;
-      padding: 8px 18px;
+      padding: 9px 20px;
       border-radius: 8px;
       font-size: 0.85rem;
       font-weight: 600;
@@ -117,7 +118,7 @@
       align-items: center;
       gap: 6px;
       transition: all 0.2s;
-      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
     }
 
     .btn:hover {
@@ -140,13 +141,13 @@
     .tree-container {
       position: relative;
       width: 100%;
-      max-width: 680px;
+      max-width: 720px;
       display: flex;
-      margin: 20px 0 60px;
+      margin: 10px 0 50px;
     }
 
     .root-wrapper {
-      width: 140px;
+      width: 145px;
       flex-shrink: 0;
       display: flex;
       align-items: center;
@@ -157,15 +158,15 @@
     .root-card {
       background: #080d1a;
       border: 2px solid var(--accent);
-      box-shadow: 0 0 20px var(--accent-glow);
+      box-shadow: 0 0 25px var(--accent-glow);
       border-radius: 20px;
-      padding: 10px 14px;
+      padding: 12px 14px;
       text-align: center;
       width: 100%;
     }
 
     .root-tag {
-      font-size: 0.6rem;
+      font-size: 0.62rem;
       color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -174,8 +175,8 @@
     }
 
     .root-title {
-      font-size: 0.85rem;
-      font-weight: 700;
+      font-size: 0.9rem;
+      font-weight: 800;
       color: #fff;
     }
 
@@ -201,17 +202,17 @@
       margin-left: 60px;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 22px;
       z-index: 5;
     }
 
     .node-card {
       background: var(--card-bg);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      border-radius: 14px;
+      padding: 14px 18px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
       transform-origin: left center;
       opacity: 0;
       transform: scale(0.9) translateX(15px);
@@ -221,7 +222,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       font-weight: 700;
       margin-bottom: 8px;
     }
@@ -230,59 +231,121 @@
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
+      margin-bottom: 12px;
     }
 
     .tag {
       font-size: 0.72rem;
       padding: 3px 8px;
       border-radius: 6px;
-      background: rgba(30, 41, 59, 0.6);
+      background: rgba(30, 41, 59, 0.7);
       border: 1px solid #334155;
       color: #94a3b8;
     }
 
-    footer {
-      text-align: center;
-      margin-top: auto;
+    /* Teacher Video Links */
+    .teacher-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 10px;
     }
 
-    .dev-by {
-      font-size: 0.65rem;
-      letter-spacing: 2px;
-      color: #64748b;
-      margin-bottom: 4px;
+    .yt-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #fca5a5;
+      font-size: 0.73rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .yt-link:hover {
+      background: #ef4444;
+      color: #fff;
+      transform: scale(1.03);
+    }
+
+    /* VIP Creator Credit Badge */
+    .creator-container {
+      margin-top: 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .creator-box {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(8, 13, 26, 0.95));
+      border: 1.5px solid rgba(56, 189, 248, 0.4);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+      border-radius: 16px;
+      padding: 16px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.3s;
+    }
+
+    .creator-box:hover {
+      border-color: #38bdf8;
+      box-shadow: 0 0 35px rgba(56, 189, 248, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .creator-subtitle {
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      font-weight: 700;
+      color: #38bdf8;
       text-transform: uppercase;
     }
 
-    .dev-name {
-      font-size: 1rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      color: #f1f5f9;
-      margin-bottom: 4px;
+    .creator-name {
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: 2.5px;
+      background: linear-gradient(90deg, #ffffff, #38bdf8, #a855f7, #ffffff);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 5s ease infinite;
     }
 
-    .dev-handle {
-      font-size: 0.75rem;
-      color: #0284c7;
-      text-decoration: none;
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    .watermark {
-      position: fixed;
-      bottom: 12px;
-      right: 12px;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid #1e293b;
+    .creator-link {
       color: #94a3b8;
-      font-size: 0.65rem;
-      padding: 4px 10px;
-      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .creator-link:hover {
+      color: #38bdf8;
     }
   </style>
 </head>
 <body>
 
+  <!-- Switch Buttons -->
   <nav class="nav-switcher">
     <a href="https://itslucky148.github.io/network-roadmap/" class="nav-btn">🌐 Network Engineer</a>
     <a href="#" class="nav-btn active">💻 Software Engineer</a>
@@ -290,7 +353,7 @@
 
   <div class="badge">CAREER GUIDE 2026</div>
   <h1>SOFTWARE ENGINEER<br>ROADMAP</h1>
-  <p class="subtitle">Step-by-step interactive visual path from fundamentals to enterprise architectures.</p>
+  <p class="subtitle">Step-by-step interactive visual path with best curated YouTube lectures.</p>
 
   <div class="controls">
     <button class="btn" id="replayBtn">
@@ -312,6 +375,7 @@
 
     <div class="nodes-column" id="nodesColumn">
 
+      <!-- Branch 1 -->
       <div class="node-card" data-color="#10b981">
         <div class="node-header" style="color: #34d399;">
           <span>⚡</span> Programming Fundamentals
@@ -319,10 +383,16 @@
         <div class="node-subtopics">
           <span class="tag">C++ / Java / Python</span>
           <span class="tag">OOP Concepts</span>
-          <span class="tag">Memory & Pointers</span>
+          <span class="tag">Memory & Logic</span>
+        </div>
+        <div class="teacher-links">
+          <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL" target="_blank" class="yt-link">▶ C++ by Harry</a>
+          <a href="https://www.youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop" target="_blank" class="yt-link">▶ Java by Apna College</a>
+          <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg" target="_blank" class="yt-link">▶ Python by Harry</a>
         </div>
       </div>
 
+      <!-- Branch 2 -->
       <div class="node-card" data-color="#38bdf8">
         <div class="node-header" style="color: #38bdf8;">
           <span>📦</span> Data Structures & Algorithms
@@ -331,9 +401,16 @@
           <span class="tag">Arrays & Strings</span>
           <span class="tag">Stacks & Queues</span>
           <span class="tag">Trees & Graphs</span>
+          <span class="tag">DP</span>
+        </div>
+        <div class="teacher-links">
+          <a href="https://www.youtube.com/playlist?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz" target="_blank" class="yt-link">▶ Striver (take U forward)</a>
+          <a href="https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA" target="_blank" class="yt-link">▶ DSA by Love Babbar</a>
+          <a href="https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ" target="_blank" class="yt-link">▶ DSA by Kunal Kushwaha</a>
         </div>
       </div>
 
+      <!-- Branch 3 -->
       <div class="node-card" data-color="#f59e0b">
         <div class="node-header" style="color: #fbbf24;">
           <span>💻</span> Core Computer Science
@@ -343,8 +420,14 @@
           <span class="tag">DBMS & SQL</span>
           <span class="tag">Computer Networks</span>
         </div>
+        <div class="teacher-links">
+          <a href="https://www.youtube.com/playlist?list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p" target="_blank" class="yt-link">▶ OS by Gate Smashers</a>
+          <a href="https://www.youtube.com/playlist?list=PLxCzCOWd7aiFAN6I8C9XdK_KVdQokfqwK" target="_blank" class="yt-link">▶ DBMS by Gate Smashers</a>
+          <a href="https://www.youtube.com/playlist?list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_" target="_blank" class="yt-link">▶ CN by Gate Smashers</a>
+        </div>
       </div>
 
+      <!-- Branch 4 -->
       <div class="node-card" data-color="#ec4899">
         <div class="node-header" style="color: #f472b6;">
           <span>🛠️</span> Tools & Version Control
@@ -354,40 +437,60 @@
           <span class="tag">Linux CLI</span>
           <span class="tag">Docker Basics</span>
         </div>
+        <div class="teacher-links">
+          <a href="https://www.youtube.com/watch?v=apGV9Kg7ics" target="_blank" class="yt-link">▶ Git by Kunal Kushwaha</a>
+          <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agK8pojo23OHiNz3Jm65CHX" target="_blank" class="yt-link">▶ Git by Harry</a>
+          <a href="https://www.youtube.com/watch?v=31ieHmcTUOk" target="_blank" class="yt-link">▶ Docker by Piyush Garg</a>
+        </div>
       </div>
 
+      <!-- Branch 5 -->
       <div class="node-card" data-color="#a855f7">
         <div class="node-header" style="color: #c084fc;">
           <span>🌐</span> Full Stack & System Design
         </div>
         <div class="node-subtopics">
-          <span class="tag">REST APIs & Microservices</span>
-          <span class="tag">Caching & Redis</span>
-          <span class="tag">Cloud (AWS/GCP)</span>
+          <span class="tag">React & Node.js</span>
+          <span class="tag">REST APIs & DB</span>
+          <span class="tag">System Design</span>
+        </div>
+        <div class="teacher-links">
+          <a href="https://www.youtube.com/playlist?list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige" target="_blank" class="yt-link">▶ Web Dev by Chai aur Code</a>
+          <a href="https://www.youtube.com/playlist?list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD" target="_blank" class="yt-link">▶ MERN by Love Babbar</a>
+          <a href="https://www.youtube.com/playlist?list=PLMC9HnGGQTQuk3Uzbgsm745pabrf4mPsm" target="_blank" class="yt-link">▶ System Design by Gaurav Sen</a>
         </div>
       </div>
 
+      <!-- Branch 6 -->
       <div class="node-card" data-color="#ef4444">
         <div class="node-header" style="color: #f87171;">
-          <span>🚀</span> Career & Growth
+          <span>🚀</span> Career & Production
         </div>
         <div class="node-subtopics">
           <span class="tag">Open Source</span>
-          <span class="tag">Real Projects</span>
+          <span class="tag">Resume Building</span>
           <span class="tag">Mock Interviews</span>
+        </div>
+        <div class="teacher-links">
+          <a href="https://www.youtube.com/watch?v=msyGSmhp_fE" target="_blank" class="yt-link">▶ Open Source by Kunal</a>
+          <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME" target="_blank" class="yt-link">▶ Projects by Harry</a>
         </div>
       </div>
 
     </div>
   </div>
 
-  <footer>
-    <div class="dev-by">DEVELOPED & DESIGNED BY</div>
-    <div class="dev-name">LUCKY A. S</div>
-    <a href="https://github.com/itslucky148" target="_blank" class="dev-handle">GITHUB.COM/ITSLUCKY148</a>
-  </footer>
-
-  <div class="watermark">Created by : Lucky A. S</div>
+  <!-- VIP Creator Credit Box -->
+  <div class="creator-container">
+    <div class="creator-box">
+      <div class="creator-subtitle">⚡ DEVELOPED & CREATED BY ⚡</div>
+      <div class="creator-name">LUCKY A. S</div>
+      <a href="https://github.com/itslucky148" target="_blank" class="creator-link">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        github.com/itslucky148
+      </a>
+    </div>
+  </div>
 
   <script>
     const treeContainer = document.getElementById('treeContainer');
