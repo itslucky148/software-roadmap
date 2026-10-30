@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Software Engineer Roadmap | Lucky A.S</title>
+  <title>Network Engineer Roadmap | Lucky A.S</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <style>
     :root {
@@ -31,38 +31,65 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 24px 16px 80px;
+      padding: 16px 12px 80px;
     }
 
-    .nav-switcher {
-      display: flex;
-      gap: 10px;
-      background: rgba(15, 23, 42, 0.85);
+    /* All Roadmaps Connected Scrollable Menu */
+    .roadmap-nav-wrapper {
+      width: 100%;
+      max-width: 950px;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 6px 4px 14px;
+      margin-bottom: 20px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(56, 189, 248, 0.4) transparent;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .roadmap-nav-wrapper::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .roadmap-nav-wrapper::-webkit-scrollbar-thumb {
+      background: rgba(56, 189, 248, 0.4);
+      border-radius: 4px;
+    }
+
+    .roadmap-nav-bar {
+      display: inline-flex;
+      gap: 8px;
+      background: rgba(15, 23, 42, 0.9);
       border: 1px solid var(--border);
-      padding: 6px 12px;
+      padding: 6px 10px;
       border-radius: 30px;
-      margin-bottom: 25px;
       backdrop-filter: blur(10px);
     }
 
-    .nav-btn {
+    .roadmap-nav-btn {
       text-decoration: none;
-      font-size: 0.8rem;
+      font-size: 0.76rem;
       font-weight: 600;
-      padding: 7px 16px;
+      padding: 6px 14px;
       border-radius: 20px;
       transition: all 0.25s ease;
       color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
     }
 
-    .nav-btn.active {
+    .roadmap-nav-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .roadmap-nav-btn.active {
       background: var(--accent);
       color: #030712;
-      box-shadow: 0 0 16px var(--accent-glow);
-    }
-
-    .nav-btn:hover:not(.active) {
-      color: #fff;
+      box-shadow: 0 0 14px var(--accent-glow);
+      font-weight: 700;
     }
 
     .badge {
@@ -456,13 +483,33 @@
 </head>
 <body>
 
-  <nav class="nav-switcher">
-    <a href="https://itslucky148.github.io/network-roadmap/" class="nav-btn">🌐 Network Engineer</a>
-    <a href="#" class="nav-btn active">💻 Software Engineer</a>
-  </nav>
+  <!-- Complete Real Repositories Menu Bar -->
+  <div class="roadmap-nav-wrapper">
+    <nav class="roadmap-nav-bar">
+      <a href="https://itslucky148.github.io/network-roadmap/" class="roadmap-nav-btn active">🌐 Network</a>
+      <a href="https://itslucky148.github.io/software-roadmap/" class="roadmap-nav-btn">💻 Software</a>
+      <a href="https://itslucky148.github.io/cybersecurity-roadmap/" class="roadmap-nav-btn">🛡️ Cybersecurity</a>
+      <a href="https://itslucky148.github.io/frontend-roadmap/" class="roadmap-nav-btn">🎨 Frontend</a>
+      <a href="https://itslucky148.github.io/systems-programming-roadmap/" class="roadmap-nav-btn">⚙️ Systems Prog</a>
+      <a href="https://itslucky148.github.io/platform-engineering-roadmap/" class="roadmap-nav-btn">🏗️ Platform Eng</a>
+      <a href="https://itslucky148.github.io/devsecops-roadmap/" class="roadmap-nav-btn">🔐 DevSecOps</a>
+      <a href="https://itslucky148.github.io/cloud-architect-roadmap/" class="roadmap-nav-btn">☁️ Cloud Arch</a>
+      <a href="https://itslucky148.github.io/mlops-roadmap/" class="roadmap-nav-btn">🚀 MLOps</a>
+      <a href="https://itslucky148.github.io/data-engineer-roadmap/" class="roadmap-nav-btn">🗄️ Data Engineer</a>
+      <a href="https://itslucky148.github.io/sre-roadmap/" class="roadmap-nav-btn">🚨 SRE</a>
+      <a href="https://itslucky148.github.io/embedded-iot-roadmap/" class="roadmap-nav-btn">🔌 Embedded IoT</a>
+      <a href="https://itslucky148.github.io/blockchain-roadmap/" class="roadmap-nav-btn">⛓️ Blockchain</a>
+      <a href="https://itslucky148.github.io/game-dev-roadmap/" class="roadmap-nav-btn">🎮 Game Dev</a>
+      <a href="https://itslucky148.github.io/mobile-dev-roadmap/" class="roadmap-nav-btn">📱 Mobile Dev</a>
+      <a href="https://itslucky148.github.io/fullstack-roadmap/" class="roadmap-nav-btn">🌍 Full Stack</a>
+      <a href="https://itslucky148.github.io/data-science-roadmap/" class="roadmap-nav-btn">📊 Data Science</a>
+      <a href="https://itslucky148.github.io/ai-ml-roadmap/" class="roadmap-nav-btn">🤖 AI & ML</a>
+      <a href="https://itslucky148.github.io/devops-roadmap/" class="roadmap-nav-btn">⚡ DevOps</a>
+    </nav>
+  </div>
 
   <div class="badge">CAREER GUIDE 2026</div>
-  <h1>SOFTWARE ENGINEER<br>ROADMAP</h1>
+  <h1>NETWORK ENGINEER<br>ROADMAP</h1>
   <p class="subtitle">Step-by-step interactive visual path with best curated YouTube lectures.</p>
 
   <div class="controls">
@@ -479,7 +526,7 @@
     <div class="root-wrapper">
       <div class="root-card" id="rootCard">
         <div class="root-tag">ROOT ROLE</div>
-        <div class="root-title">Software Engineer</div>
+        <div class="root-title">Network Engineer</div>
       </div>
     </div>
 
@@ -487,154 +534,153 @@
 
       <div class="node-card" data-color="#10b981">
         <div class="node-header" style="color: #34d399;">
-          <span>⚡</span> Programming Fundamentals
+          <span>🌐</span> Networking Fundamentals
         </div>
         <div class="node-subtopics">
-          <span class="tag">C++ / Java / Python</span>
-          <span class="tag">OOP Concepts</span>
-          <span class="tag">Memory & Logic</span>
+          <span class="tag">OSI Model</span>
+          <span class="tag">TCP/IP</span>
+          <span class="tag">Subnetting</span>
+          <span class="tag">Routing</span>
         </div>
         <div class="teacher-links">
-          <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL" target="_blank" class="yt-link">▶ C++ by Harry</a>
-          <a href="https://www.youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop" target="_blank" class="yt-link">▶ Java by Apna College</a>
-          <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg" target="_blank" class="yt-link">▶ Python by Harry</a>
+          <a href="https://www.youtube.com/playlist?list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_" target="_blank" class="yt-link">▶ CN by Gate Smashers</a>
+          <a href="https://www.youtube.com/playlist?list=PLDqahtm2vA76Z2Uv8ffp_00hI_vF_1zK4" target="_blank" class="yt-link">▶ Network+ by Professor Messer</a>
+          <a href="https://www.youtube.com/playlist?list=PLIhvC56v63IJVXv0GJcl9vO5un6znKPO1" target="_blank" class="yt-link">▶ CCNA by Jeremy's IT Lab</a>
         </div>
       </div>
 
       <div class="node-card" data-color="#38bdf8">
         <div class="node-header" style="color: #38bdf8;">
-          <span>📦</span> Data Structures & Algorithms
+          <span>🛠️</span> Tools & Lab Practice
         </div>
         <div class="node-subtopics">
-          <span class="tag">Arrays & Strings</span>
-          <span class="tag">Stacks & Queues</span>
-          <span class="tag">Trees & Graphs</span>
-          <span class="tag">DP</span>
+          <span class="tag">Cisco Packet Tracer</span>
+          <span class="tag">Wireshark</span>
+          <span class="tag">GNS3</span>
         </div>
         <div class="teacher-links">
-          <a href="https://www.youtube.com/playlist?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz" target="_blank" class="yt-link">▶ Striver (take U forward)</a>
-          <a href="https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA" target="_blank" class="yt-link">▶ DSA by Love Babbar</a>
-          <a href="https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ" target="_blank" class="yt-link">▶ DSA by Kunal Kushwaha</a>
+          <a href="https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivmtM8d0DMX688n" target="_blank" class="yt-link">▶ Packet Tracer by Keith Barker</a>
+          <a href="https://www.youtube.com/playlist?list=PLW8bTPfXNGdC5Co0VnRKZzBmwnzLITJwg" target="_blank" class="yt-link">▶ Wireshark by Chris Greer</a>
         </div>
       </div>
 
       <div class="node-card" data-color="#f59e0b">
         <div class="node-header" style="color: #fbbf24;">
-          <span>💻</span> Core Computer Science
+          <span>🐧</span> Operating Systems & Linux
         </div>
         <div class="node-subtopics">
-          <span class="tag">Operating Systems</span>
-          <span class="tag">DBMS & SQL</span>
-          <span class="tag">Computer Networks</span>
+          <span class="tag">Linux CLI</span>
+          <span class="tag">Bash Scripting</span>
+          <span class="tag">SSH & Services</span>
         </div>
         <div class="teacher-links">
-          <a href="https://www.youtube.com/playlist?list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p" target="_blank" class="yt-link">▶ OS by Gate Smashers</a>
-          <a href="https://www.youtube.com/playlist?list=PLxCzCOWd7aiFAN6I8C9XdK_KVdQokfqwK" target="_blank" class="yt-link">▶ DBMS by Gate Smashers</a>
-          <a href="https://www.youtube.com/playlist?list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_" target="_blank" class="yt-link">▶ CN by Gate Smashers</a>
+          <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agK8pojo23OHiNz3Jm65CHX" target="_blank" class="yt-link">▶ Linux by Harry</a>
+          <a href="https://www.youtube.com/watch?v=sWbANNq40_s" target="_blank" class="yt-link">▶ Linux by NetworkChuck</a>
         </div>
       </div>
 
       <div class="node-card" data-color="#ec4899">
         <div class="node-header" style="color: #f472b6;">
-          <span>🛠️</span> Tools & Version Control
+          <span>🔍</span> Design & Troubleshooting
         </div>
         <div class="node-subtopics">
-          <span class="tag">Git & GitHub</span>
-          <span class="tag">Linux CLI</span>
-          <span class="tag">Docker Basics</span>
+          <span class="tag">Spine-Leaf</span>
+          <span class="tag">Syslog & Monitoring</span>
+          <span class="tag">Performance</span>
         </div>
         <div class="teacher-links">
-          <a href="https://www.youtube.com/watch?v=apGV9Kg7ics" target="_blank" class="yt-link">▶ Git by Kunal Kushwaha</a>
-          <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agK8pojo23OHiNz3Jm65CHX" target="_blank" class="yt-link">▶ Git by Harry</a>
-          <a href="https://www.youtube.com/watch?v=31ieHmcTUOk" target="_blank" class="yt-link">▶ Docker by Piyush Garg</a>
+          <a href="https://www.youtube.com/watch?v=2r1p0B5K1gA" target="_blank" class="yt-link">▶ Network Troubleshooting by Chuck</a>
+          <a href="https://www.youtube.com/playlist?list=PLDqahtm2vA74p7xH1m37wG8X9eXk6nZ1D" target="_blank" class="yt-link">▶ Net+ Labs by Messer</a>
         </div>
       </div>
 
       <div class="node-card" data-color="#a855f7">
         <div class="node-header" style="color: #c084fc;">
-          <span>🌐</span> Full Stack & System Design
+          <span>🔒</span> Advanced Topics
         </div>
         <div class="node-subtopics">
-          <span class="tag">React & Node.js</span>
-          <span class="tag">REST APIs & DB</span>
-          <span class="tag">System Design</span>
+          <span class="tag">BGP & OSPF</span>
+          <span class="tag">IPSec VPN</span>
+          <span class="tag">Cloud (VPC/AWS)</span>
         </div>
         <div class="teacher-links">
-          <a href="https://www.youtube.com/playlist?list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige" target="_blank" class="yt-link">▶ Web Dev by Chai aur Code</a>
-          <a href="https://www.youtube.com/playlist?list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD" target="_blank" class="yt-link">▶ MERN by Love Babbar</a>
-          <a href="https://www.youtube.com/playlist?list=PLMC9HnGGQTQuk3Uzbgsm745pabrf4mPsm" target="_blank" class="yt-link">▶ System Design by Gaurav Sen</a>
+          <a href="https://www.youtube.com/playlist?list=PLhfrWIlLOoKM9w29uA41F_u1zO1aCknqE" target="_blank" class="yt-link">▶ BGP & OSPF by David Bombal</a>
+          <a href="https://www.youtube.com/watch?v=k1RI5locZE4" target="_blank" class="yt-link">▶ AWS VPC by Piyush Garg</a>
         </div>
       </div>
 
       <div class="node-card" data-color="#ef4444">
         <div class="node-header" style="color: #f87171;">
-          <span>🚀</span> Career & Production
+          <span>🚀</span> Career & Growth
         </div>
         <div class="node-subtopics">
-          <span class="tag">Open Source</span>
-          <span class="tag">Resume Building</span>
-          <span class="tag">Mock Interviews</span>
+          <span class="tag">CCNA / CCNP</span>
+          <span class="tag">Home Lab Portfolio</span>
+          <span class="tag">Interviews</span>
         </div>
         <div class="teacher-links">
-          <a href="https://www.youtube.com/watch?v=msyGSmhp_fE" target="_blank" class="yt-link">▶ Open Source by Kunal</a>
-          <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME" target="_blank" class="yt-link">▶ Projects by Harry</a>
+          <a href="https://www.youtube.com/watch?v=0h5q2W0s940" target="_blank" class="yt-link">▶ CCNA Prep by NetworkChuck</a>
+          <a href="https://www.youtube.com/watch?v=wXQJ5L8x580" target="_blank" class="yt-link">▶ Portfolio Labs by Bombal</a>
         </div>
       </div>
 
     </div>
   </div>
 
-  <!-- Recommended Books -->
+  <!-- Recommended Books Section -->
   <div class="books-section">
-    <div class="books-title"><span>📚</span> Recommended Engineering Books</div>
-    <div class="books-subtitle">Industry-standard reference books to master software development.</div>
+    <div class="books-title"><span>📚</span> Recommended Networking Books</div>
+    <div class="books-subtitle">Industry-standard reference books to master networking infrastructure.</div>
     <div class="books-grid">
       
+      <!-- Book 1 -->
       <div class="book-card">
         <div>
-          <div class="book-name">Clean Code — Robert Martin</div>
-          <div class="book-desc">Best practices for writing readable, maintainable, production software.</div>
+          <div class="book-name">Computer Networks — Tanenbaum</div>
+          <div class="book-desc">The academic gold standard for protocols, physical media, and architecture.</div>
         </div>
         <div class="store-actions">
-          <a href="https://www.amazon.in/s?k=Clean+Code+Robert+Martin" target="_blank" rel="noopener noreferrer" class="store-btn amazon-btn">
+          <a href="https://www.amazon.in/dp/933251886X?tag=techroadmap26-21" target="_blank" rel="sponsored nofollow noopener" class="store-btn amazon-btn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.9 14.5c-2.4 1.8-5.9 2.7-8.9 2.7-4.2 0-8-1.5-10.9-4.1-.2-.2-.2-.5 0-.7.3-.2.6-.1.8.1 2.6 2.3 6.1 3.7 9.9 3.7 2.7 0 5.8-.8 8-2.3.4-.3.9.1.8.5-.1.3-.4.5-.7.6zm1.3-.9c-.3-.4-.5-.9-.5-1.4 0-1.4 1.1-2.4 2.5-2.4 1.3 0 2.3.9 2.3 2.3 0 1.5-1.1 2.5-2.5 2.5-.7 0-1.4-.4-1.8-1zm7-2c-.3 0-.6.1-.7.4-.7 1.8-2.4 3-4.3 3-.7 0-1.4-.2-2-.5l-.4-.3c-.3-.2-.7 0-.7.3 0 .2.1.4.3.5.9.5 1.8.8 2.8.8 2.5 0 4.6-1.5 5.5-3.8.1-.3 0-.6-.3-.7-.1-.1-.2-.1-.2-.1z"/></svg>
             <span>Amazon</span>
           </a>
-          <a href="https://www.flipkart.com/search?q=Clean+Code+Robert+Martin" target="_blank" rel="noopener noreferrer" class="store-btn flipkart-btn">
+          <a href="https://fktr.in/Vjx43J3" target="_blank" rel="sponsored nofollow noopener" class="store-btn flipkart-btn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 18a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM7 18a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm14.3-13.6l-2.4 9.1c-.2.8-1 1.5-1.9 1.5H7.9c-.9 0-1.7-.6-1.9-1.5L3.3 3H1V1h3.3c.9 0 1.7.6 1.9 1.5L7 6h13.2c.7 0 1.2.6 1.1 1.4z"/></svg>
             <span>Flipkart</span>
           </a>
         </div>
       </div>
 
+      <!-- Book 2 -->
       <div class="book-card">
         <div>
-          <div class="book-name">A Common-Sense Guide to DSA</div>
-          <div class="book-desc">Practical algorithmic thinking and data structure implementations.</div>
+          <div class="book-name">CCNA 200-301 Cert Guide</div>
+          <div class="book-desc">By Wendell Odom. Complete preparation manual for passing Cisco CCNA.</div>
         </div>
         <div class="store-actions">
-          <a href="https://www.amazon.in/s?k=Data+Structures+and+Algorithms+book" target="_blank" rel="noopener noreferrer" class="store-btn amazon-btn">
+          <a href="https://www.amazon.in/dp/1587147149?tag=techroadmap26-21" target="_blank" rel="sponsored nofollow noopener" class="store-btn amazon-btn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.9 14.5c-2.4 1.8-5.9 2.7-8.9 2.7-4.2 0-8-1.5-10.9-4.1-.2-.2-.2-.5 0-.7.3-.2.6-.1.8.1 2.6 2.3 6.1 3.7 9.9 3.7 2.7 0 5.8-.8 8-2.3.4-.3.9.1.8.5-.1.3-.4.5-.7.6zm1.3-.9c-.3-.4-.5-.9-.5-1.4 0-1.4 1.1-2.4 2.5-2.4 1.3 0 2.3.9 2.3 2.3 0 1.5-1.1 2.5-2.5 2.5-.7 0-1.4-.4-1.8-1zm7-2c-.3 0-.6.1-.7.4-.7 1.8-2.4 3-4.3 3-.7 0-1.4-.2-2-.5l-.4-.3c-.3-.2-.7 0-.7.3 0 .2.1.4.3.5.9.5 1.8.8 2.8.8 2.5 0 4.6-1.5 5.5-3.8.1-.3 0-.6-.3-.7-.1-.1-.2-.1-.2-.1z"/></svg>
             <span>Amazon</span>
           </a>
-          <a href="https://www.flipkart.com/search?q=Data+Structures+and+Algorithms+book" target="_blank" rel="noopener noreferrer" class="store-btn flipkart-btn">
+          <a href="https://fktr.in/BK6tdbl" target="_blank" rel="sponsored nofollow noopener" class="store-btn flipkart-btn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 18a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM7 18a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm14.3-13.6l-2.4 9.1c-.2.8-1 1.5-1.9 1.5H7.9c-.9 0-1.7-.6-1.9-1.5L3.3 3H1V1h3.3c.9 0 1.7.6 1.9 1.5L7 6h13.2c.7 0 1.2.6 1.1 1.4z"/></svg>
             <span>Flipkart</span>
           </a>
         </div>
       </div>
 
+      <!-- Book 3 -->
       <div class="book-card">
         <div>
-          <div class="book-name">System Design Interview — Alex Xu</div>
-          <div class="book-desc">Step-by-step questions and solutions for large scale systems.</div>
+          <div class="book-name">Network Programmability & Automation</div>
+          <div class="book-desc">Learn how to configure network devices using Python, APIs, and Linux.</div>
         </div>
         <div class="store-actions">
-          <a href="https://www.amazon.in/s?k=System+Design+Interview+Alex+Xu" target="_blank" rel="noopener noreferrer" class="store-btn amazon-btn">
+          <a href="https://www.amazon.in/dp/1491931256?tag=techroadmap26-21" target="_blank" rel="sponsored nofollow noopener" class="store-btn amazon-btn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.9 14.5c-2.4 1.8-5.9 2.7-8.9 2.7-4.2 0-8-1.5-10.9-4.1-.2-.2-.2-.5 0-.7.3-.2.6-.1.8.1 2.6 2.3 6.1 3.7 9.9 3.7 2.7 0 5.8-.8 8-2.3.4-.3.9.1.8.5-.1.3-.4.5-.7.6zm1.3-.9c-.3-.4-.5-.9-.5-1.4 0-1.4 1.1-2.4 2.5-2.4 1.3 0 2.3.9 2.3 2.3 0 1.5-1.1 2.5-2.5 2.5-.7 0-1.4-.4-1.8-1zm7-2c-.3 0-.6.1-.7.4-.7 1.8-2.4 3-4.3 3-.7 0-1.4-.2-2-.5l-.4-.3c-.3-.2-.7 0-.7.3 0 .2.1.4.3.5.9.5 1.8.8 2.8.8 2.5 0 4.6-1.5 5.5-3.8.1-.3 0-.6-.3-.7-.1-.1-.2-.1-.2-.1z"/></svg>
             <span>Amazon</span>
           </a>
-          <a href="https://www.flipkart.com/search?q=System+Design+Interview+Alex+Xu" target="_blank" rel="noopener noreferrer" class="store-btn flipkart-btn">
+          <a href="https://fktr.in/bZJA6N8" target="_blank" rel="sponsored nofollow noopener" class="store-btn flipkart-btn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 18a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM7 18a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm14.3-13.6l-2.4 9.1c-.2.8-1 1.5-1.9 1.5H7.9c-.9 0-1.7-.6-1.9-1.5L3.3 3H1V1h3.3c.9 0 1.7.6 1.9 1.5L7 6h13.2c.7 0 1.2.6 1.1 1.4z"/></svg>
             <span>Flipkart</span>
           </a>
@@ -648,7 +694,7 @@
   <div class="creator-container">
     <div class="creator-box">
       <div class="creator-subtitle">⚡ DEVELOPED & CREATED BY ⚡</div>
-      <div class="creator-name">LUCKY A. S</div>
+      <div class="creator-name">Lucky A.S</div>
       <a href="https://github.com/itslucky148" target="_blank" class="creator-link">
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         github.com/itslucky148
@@ -751,4 +797,4 @@
     document.getElementById('showAllBtn').addEventListener('click', showAll);
   </script>
 </body>
-</html> 
+</html>
